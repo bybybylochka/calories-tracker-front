@@ -1,3 +1,7 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+
+
 .link{
   display:inline;
   list-style: none;
@@ -5,5 +9,8 @@
   cursor: pointer;
   .linkButton{
     display: inline-block;
+    text-decoration: none;
+    color: $light-text-color;
+    @include font(20px, 26px, 500);
   }
 }
