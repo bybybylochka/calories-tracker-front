@@ -1,0 +1,10 @@
+@import 'style-variables';
+
+.wrapper{
+  max-width: $content-width;
+  margin:auto;
+}
+
+body{
+  background-color: $main-color;
+}
