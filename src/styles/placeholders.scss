@@ -1,5 +1,11 @@
 @import "fonts";
+@import "style-variables";
 
 %font-primary{
   font-family: 'PlexSans', Verdana, sans-serif;
+}
+
+%alignment{
+  max-width: $content-width;
+  margin:auto;
 }

@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+@import '../../styles/style-variables';
+@import '../../styles/placeholders';
+
+.coloring{
+  background-color: $additional-color;
+  .wrapper {
+    @extend %alignment;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 57px;
+  }
+}
+
+.advantage{
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: start;
+  h3{
+    @include font($size: 2rem,$weight: 600 );
+    margin: 0;
+  }
+  p{
+    @include font(2rem);
+    margin: 6px 0 0;
+  }
+}

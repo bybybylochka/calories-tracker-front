@@ -1,9 +1,17 @@
 @import '../../styles/style-variables';
+@import '../../styles/placeholders';
 
-.wrapper{
-  padding: 25px 57px;
-  display: flex;
-  justify-content: space-between;
+.coloring{
+  background-color: $main-color;
+  .wrapper{
+    @extend %alignment;
+    padding: 25px 57px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
+
+
 
 

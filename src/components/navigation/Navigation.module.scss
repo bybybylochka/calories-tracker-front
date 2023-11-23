@@ -7,10 +7,17 @@
   list-style: none;
   padding: 0 59px;
   cursor: pointer;
-  .linkButton{
+  .inactiveLinkButton{
     display: inline-block;
     text-decoration: none;
     color: $light-text-color;
-    @include font(20px, 26px, 500);
+    @include font(2rem, 2.6rem, 500);
+  }
+  .activeLinkButton{
+    display: inline-block;
+    text-decoration: none;
+    color:$additional-highlighting-color;
+    @include font(2rem, 2.6rem, 500);
   }
 }
+

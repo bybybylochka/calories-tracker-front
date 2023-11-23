@@ -1,0 +1,54 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+@import '../../styles/placeholders';
+
+.coloring{
+  background-color: $main-color;
+  .wrapper {
+    border-radius: 33px;
+    @extend %alignment;
+    background-color: $additional-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px 20px;
+    gap: 157px;
+  }
+  padding-bottom: 29px;
+}
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  .title{
+    @include font($size: 3.2rem, $weight: 600);
+  }
+  .conditions{
+    @include font($size: 1.2rem, $weight: 600);
+    margin-top: 18px;
+    &, &>*{
+      color: $conditions-color;
+    }
+  }
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.buttonContainer{
+  margin-top: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .link{
+    @include font($size: 1.8rem, $weight: 500);
+    color: $main-color;
+  }
+}
+.errorText{
+  color:$error-color;
+  @include font($size: 1.6rem, $weight: 500);
+}
+.errorField{
+  border-color: $error-color;
+}

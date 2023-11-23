@@ -1,0 +1,45 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+@import '../../styles/placeholders';
+
+.coloring{
+  background-color: $main-color;
+  .wrapper {
+    border-radius: 33px;
+    @extend %alignment;
+    background-color: $additional-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px 20px;
+  }
+  padding-bottom: 29px;
+}
+
+.title{
+  @include font($size: 5.5rem,$weight: 600);
+}
+.text{
+  @include font($size: 2rem,$weight: 500);
+}
+.sale{
+  background-color: $highlighting-color;
+  border-radius: 26px;
+  padding: 4px 21px;
+  display: flex;
+  gap: 13px;
+  width: fit-content;
+  float: right;
+  margin-bottom: 16px;
+  & p{
+    @include font($size: 1.6rem, $weight: 600);
+  }
+}
+.description{
+  & p{
+    margin-bottom: 60px;
+  }
+  & h1{
+    margin-bottom: 20px;
+  }
+}
