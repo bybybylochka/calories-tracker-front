@@ -1,0 +1,36 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+@import '../../styles/placeholders';
+
+.coloring{
+  background-color: $additional-color;
+  .wrapper {
+    @extend %alignment;
+    margin-top: 150px;
+  }
+}
+p{
+  @include font($size:2rem, $weight: 500)
+}
+.title{
+  @include font($size: 3.6rem, $weight: 600);
+  margin-bottom: 60px;
+}
+.functions{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 45px;
+  p{
+    margin: 0;
+  }
+}
+.function{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  img{
+    width: 20px;
+  }
+}

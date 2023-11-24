@@ -1,0 +1,19 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+@import '../../styles/placeholders';
+
+.coloring{
+  background-color: $additional-color;
+  .wrapper {
+    @extend %alignment;
+  }
+}
+.title{
+  @include font($size: 3.6rem,$weight: 600);
+}
+.argumentsContainer{
+  display: flex;
+  justify-content: space-between;
+  gap: 38px;
+
+}

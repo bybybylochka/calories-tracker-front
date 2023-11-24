@@ -1,0 +1,23 @@
+@import '../../../styles/style-variables';
+@import '../../../styles/mixins';
+
+.argument{
+  background-color: $background-color;
+  border-radius: 26px;
+  padding: 26px;
+}
+
+.title{
+  background-color: $additional-highlighting-color;
+  padding: 10px 25px;
+  border-radius: 26px;
+  width: fit-content;
+  margin-bottom: 28px;
+  h4{
+    @include font($size: 1.6rem, $weight: 600);
+    margin: 0;
+  }
+}
+.text{
+  @include font(1.6rem);
+}
