@@ -1,0 +1,28 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/style-variables';
+@import '../../../../styles/placeholders';
+
+.profileInfo{
+  display: flex;
+  align-items: start;
+  margin: auto;
+  justify-content: center;
+}
+.welcomeText{
+  @include font($size: 2.8rem, $weight: 600);
+  text-align: center;
+}
+.briefMealInfo{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  border-bottom: $additional-color 4px solid;
+  .tracker{
+    flex-grow: 1;
+    text-align: end;
+  }
+  img{
+    flex-basis: auto;
+  }
+}

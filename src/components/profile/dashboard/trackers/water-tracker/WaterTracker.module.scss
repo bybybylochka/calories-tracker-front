@@ -1,0 +1,12 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/placeholders";
+@import "../../../../../styles/style-variables";
+
+.wrapper{
+  padding: 31px;
+  background-color: $background-water-color;
+  border-radius: 26px;
+  margin-top: 30px;
+  display: flex;
+
+}

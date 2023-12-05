@@ -1,9 +1,11 @@
 import {authApi} from "../api/api";
+import Cookies from "js-cookie";
 
 const SET_USER_DATA = "SET_USER_DATA";
 
 let initialState = {
-    token: null
+    token: null,
+    isAuth:false
 }
 
 const authReducer = (state = initialState, action) => {
@@ -11,21 +13,18 @@ const authReducer = (state = initialState, action) => {
         case SET_USER_DATA:
             return {
                 ...state,
-                ...action.payload}
+                ...action.payload,
+                isAuth: true
+            }
         default: return state;
     }
 }
 export const login = (login, password) => async (dispatch) => {
-    // let token = login+password;
-    // dispatch(setUserData(token));
     let response = await authApi.login(login, password);
     if(response.token){
+        Cookies.set('jwt', response.token)
         dispatch(setUserData(response.token));
     }
-    // else{
-    //     const message = "Something is wrong";
-    //     dispatch(stopSubmit("login", {_error: message}));
-    // }
 }
 
 export const setUserData = (token) => {

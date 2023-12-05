@@ -1,0 +1,77 @@
+@import "../../../../../styles/style-variables";
+@import "../../../../../styles/mixins";
+
+.wrapper {
+  padding-right: 80px;
+}
+
+.circularChart {
+  display: block;
+  margin: 10px auto;
+  .text{
+    color: black;
+    @include font($size: 1.6rem, $weight: 500);
+    text-anchor: middle;
+  }
+  .percentage {
+    color: black;
+    @include font($size: 3.2rem, $weight: 600);
+    text-anchor: middle;
+
+  }
+}
+
+.circleBg {
+  fill: none;
+  stroke: $additional-color;
+  stroke-width: 41;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 39;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circularChart.color .circle {
+  stroke: $main-color;
+}
+
+
+
+.linearTrackers{
+  margin-top: 60px;
+    display: flex;
+    gap: 60px;
+  .text{
+    color: black;
+    @include font($size: 1.8rem, $weight: 500);
+    text-anchor: middle;
+  }
+  .percentage {
+    color: black;
+    @include font($size: 2.4rem, $weight: 600);
+    text-anchor: middle;
+
+  }
+}
+.lineBg{
+  fill: none;
+  stroke: $additional-color;
+  stroke-width: 41;
+  stroke-linecap: round;
+}
+.line{
+  fill: none;
+  stroke: $main-color;
+  stroke-width:39;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
