@@ -11,13 +11,56 @@ export const authApi = {
             .then(response => response.data);
     }
 }
+export const productApi = {
+    findProductByName(name) {
+        return instance.get(`/product/allByName`,
+        {
+            headers: {
+                Authorization: `Bearer ${Cookies.get('jwt')}`
+            },
+            params: {
+                name: name
+            }})
+            .then(response => response.data);
+    },
+    getTodayConsumedProduct(){
+        return instance.get('/consumed-product/today',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    },
+    addConsumedProduct(productId, weight){
+        return instance.post('/consumed-product/add',
+            {
+                productId,
+                weight
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    },
+    deleteConsumedProduct(consumedProductId){
+        return instance.delete(`/consumed-product/${consumedProductId}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data)
+    }
+}
 
 export const personalDataApi = {
-    getPersonalData(token) {
+    getPersonalData() {
         return instance.get('/personalData', {
             headers: {
-                Authorization: `Bearer ${Cookies.get('jwt')}`,
-                "Access-Control-Allow-Origin": "*"
+                Authorization: `Bearer ${Cookies.get('jwt')}`
             }
         })
             .then(response => response.data);

@@ -7,4 +7,9 @@
   .wrapper {
     @extend %alignment;
   }
+  padding-bottom: 63px;
+}
+.trackersWrapper{
+  display: flex;
+  gap: 30px
 }

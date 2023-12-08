@@ -11,7 +11,7 @@ const Navigation = () => {
                 <NavigationItem link={"materials"} text={"Материалы"}/>
                 <NavigationItem link={"subscribe"} text={"Подписка"}/>
                 {isAuth
-                    ? <NavigationItem link={"personal-account"} text={"Личный кабинет"}/>
+                    ? <NavigationItem link={"profile"} text={"Личный кабинет"}/>
                     : <NavigationItem link={"login"} text={"Войти в аккаунт"}/>
                 }
             </ul>

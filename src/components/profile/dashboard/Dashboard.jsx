@@ -16,9 +16,9 @@ const Dashboard = () =>{
     }, [])
     return (
         <div className={styles.wrapper}>
-            <Tracker norm={norm}/>
+            <Tracker norm={norm.kbju}/>
             <img src={verticalLine} alt={"vertical line"}/>
-            <ControlPanel name={name}/>
+            <ControlPanel name={name} norm={norm}/>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import styles from './Trackers.module.scss'
 import {useSelector} from "react-redux";
 
 const Tracker = ({norm}) => {
+    if(norm)
     return (
         <div className={styles.wrapper}>
             <CircleTracker norm={norm.calories}/>

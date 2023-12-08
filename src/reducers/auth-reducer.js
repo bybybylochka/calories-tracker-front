@@ -13,7 +13,6 @@ const authReducer = (state = initialState, action) => {
         case SET_USER_DATA:
             return {
                 ...state,
-                ...action.payload,
                 isAuth: true
             }
         default: return state;
@@ -22,15 +21,19 @@ const authReducer = (state = initialState, action) => {
 export const login = (login, password) => async (dispatch) => {
     let response = await authApi.login(login, password);
     if(response.token){
-        Cookies.set('jwt', response.token)
+        Cookies.set('jwt', response.token, {expires: 1})
         dispatch(setUserData(response.token));
     }
 }
+export const me = () => async (dispatch) => {
+    if(Cookies.get('jwt')){
+        dispatch(setUserData());
+    }
+}
 
-export const setUserData = (token) => {
+export const setUserData = () => {
     return {
         type: SET_USER_DATA,
-        payload: {token}
     }
 }
 

@@ -3,7 +3,7 @@ import BriefMealInfo from "./BriefMealInfo";
 import girlAvatar from "../../../../assets/girlAvatar.svg";
 import editIcon from "../../../../assets/editIcon.svg";
 import styles from './ControlPanel.module.scss';
-const ControlPanel = ({name}) =>{
+const ControlPanel = ({name, norm}) =>{
     return (
         <div>
             <div className={styles.profileInfo}>
@@ -16,10 +16,10 @@ const ControlPanel = ({name}) =>{
                 </div>
             </div>
             <div>
-                <BriefMealInfo mealName={"Завтрак"} consumed={10} norm={300}/>
-                <BriefMealInfo mealName={"Обед"} consumed={120} norm={200}/>
-                <BriefMealInfo mealName={"Ужин"} consumed={0} norm={400}/>
-                <BriefMealInfo mealName={"Перекус"} consumed={46} norm={110}/>
+                <BriefMealInfo mealName={"Завтрак"} consumed={10} norm={norm.breakfastNorm}/>
+                <BriefMealInfo mealName={"Обед"} consumed={120} norm={norm.lunchNorm}/>
+                <BriefMealInfo mealName={"Ужин"} consumed={0} norm={norm.dinnerNorm}/>
+                <BriefMealInfo mealName={"Перекус"} consumed={46} norm={norm.snackNorm}/>
             </div>
         </div>
     )

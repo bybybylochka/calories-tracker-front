@@ -1,0 +1,37 @@
+@import '../../styles/style-variables';
+@import '../../styles/placeholders';
+@import '../../styles/mixins';
+
+.coloring{
+    background-color: $background-footer-color;
+.wrapper{
+    @extend %alignment;
+        padding: 70px 150px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+    }
+    * {
+        color: $light-text-color;
+    }
+    ul{
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        @include font(1.4rem);
+        margin-bottom: 14px;
+    }
+    p{
+        @include font(1.6rem);
+        margin-top: 40px;
+    }
+    h4{
+        @include font($size: 2rem, $weight: 600);
+        margin-top: 0;
+    }
+}
+
+.logo{
+    align-items: center;
+}
