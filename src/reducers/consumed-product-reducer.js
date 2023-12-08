@@ -5,7 +5,8 @@ const SET_CONSUMED_PRODUCTS = 'SET_CONSUMED_PRODUCTS';
 const initialState = {
     consumptionInfo: {
         consumedProducts: [],
-        totalKbju: {}
+        totalKbju: {},
+        caloriesByMealType: {}
     }
 }
 
@@ -23,13 +24,12 @@ const ConsumedProductReducer = (state=initialState, action) => {
 
 export const getTodayConsumedProducts = () => async (dispatch) => {
     let response = await productApi.getTodayConsumedProduct();
-    console.log('get'+response);
     if(response){
         dispatch(setConsumedProducts(response));
     }
 }
-export const addConsumedProduct = (productId, weight) => async (dispatch) => {
-    await productApi.addConsumedProduct(productId, weight);
+export const addConsumedProduct = (productId, weight, mealType) => async (dispatch) => {
+    await productApi.addConsumedProduct(productId, weight, mealType);
 }
 
 export const deleteConsumedProduct = (productId) => async (dispatch) => {

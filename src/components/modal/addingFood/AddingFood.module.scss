@@ -14,11 +14,15 @@
   padding-right: 60px;
   border-right: $additional-color 4px solid;
   flex-basis: 50%;
+  overflow: auto;
+  height: 500px;
   p{
     @include font($size:2.2rem, $weight:600)
   }
 }
 .searchingProduct{
+  overflow: auto;
+  height: 450px;
   padding-left: 60px;
   flex-basis: 50%;
   p{
@@ -60,6 +64,12 @@
 .searchingForm{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  justify-self: end;
+  p{
+    display: inline-block;
+    padding-left: 10px;
+  }
 }
 .consumedProduct{
   img{
@@ -68,4 +78,24 @@
 }
 .name{
   flex-grow: 1;
+}
+.foodInfo {
+  padding-right: 60px;
+  border-right: $additional-color 4px solid;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  input{
+    border: none;
+    border-radius: 26px;
+    width: 50px;
+    @include font(2.2rem);
+    &:focus{
+      outline: none;
+    }
+  }
+
+}
+.productName{
+  @include font($size: 2.6rem, $weight: 600);
 }

@@ -32,11 +32,13 @@ export const productApi = {
             })
             .then(response => response.data);
     },
-    addConsumedProduct(productId, weight){
+    addConsumedProduct(productId, weight, mealType){
+        console.log(productId, weight, mealType);
         return instance.post('/consumed-product/add',
             {
                 productId,
-                weight
+                weight,
+                mealType
             },
             {
                 headers: {

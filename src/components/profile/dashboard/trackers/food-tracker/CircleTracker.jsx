@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from "./Trackers.module.scss";
 
-const CircleTracker = ({norm}) => {
+const CircleTracker = ({norm, consumed}) => {
     const CIRCLE_LENGTH = 1256.63706;
-    const consumed=500;
     const percent=(consumed/norm)*CIRCLE_LENGTH;
     
     return (

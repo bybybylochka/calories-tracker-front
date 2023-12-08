@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 import AddingFoodForm from "./AddingFoodForm";
 import {useDispatch} from "react-redux";
 import {addConsumedProduct} from "../../../reducers/consumed-product-reducer";
+import styles from './AddingFood.module.scss';
 
-const FoodInfo = ({product, setAddingProduct, setLoaded}) => {
+const FoodInfo = ({product, setAddingProduct, setLoaded, mealType}) => {
     let [newProduct, setNewProduct]= useState(product);
     let [weight, setWeight]= useState(100);
     const dispatch=useDispatch();
@@ -11,7 +12,7 @@ const FoodInfo = ({product, setAddingProduct, setLoaded}) => {
         setWeight(e.target.value);
     }
     const onSubmit = (formData) => {
-        dispatch(addConsumedProduct(newProduct.id, formData.weight));
+        dispatch(addConsumedProduct(newProduct.id, formData.weight, mealType));
         setTimeout(()=>{
             setAddingProduct(false);
             setLoaded(false);
@@ -27,13 +28,13 @@ const FoodInfo = ({product, setAddingProduct, setLoaded}) => {
         })
     }, [weight]);
     return (
-        <div>
-            <p>{product.name}</p>
+        <div className={styles.foodInfo}>
+            <p className={styles.productName}>{product.name}</p>
             <div>
-                <p>Калорийность: {newProduct.calories}</p>
-                <p>Белки: {newProduct.proteins}</p>
-                <p>Углеводы: {newProduct.carbs}</p>
-                <p>Жиры: {newProduct.fats}</p>
+                <p>Калорийность: {newProduct.calories} ккал</p>
+                <p>Белки: {newProduct.proteins} г</p>
+                <p>Углеводы: {newProduct.carbs} г</p>
+                <p>Жиры: {newProduct.fats} г</p>
             </div>
             <AddingFoodForm onChange={onWeightChange} onSubmit={onSubmit}/>
         </div>

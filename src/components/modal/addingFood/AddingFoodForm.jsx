@@ -13,17 +13,20 @@ const AddingFoodForm = ({onSubmit, onChange}) => {
     });
     return (
         <form className={styles.searchingForm} onSubmit={formik.handleSubmit}>
-            <input id="weight"
-                   name="weight"
-                   placeholder="Вес"
-                   type="text"
-                   onChange={(event) => {
-                       formik.handleChange(event);
-                       onChange(event);
-                   }}
-                   onBlur={formik.handleBlur}
-                   value={formik.values.weight}
-            />
+            <div>
+                <input id="weight"
+                       name="weight"
+                       placeholder="Вес"
+                       type="text"
+                       onChange={(event) => {
+                           formik.handleChange(event);
+                           onChange(event);
+                       }}
+                       onBlur={formik.handleBlur}
+                       value={formik.values.weight}
+                />
+                <p> грамм</p>
+            </div>
             <button type="submit">Добавить</button>
         </form>
     );

@@ -7,14 +7,14 @@ import {findProductByName} from "../../../reducers/product-reducer";
 import {deleteConsumedProduct, getTodayConsumedProducts} from "../../../reducers/consumed-product-reducer";
 import crossIcon from '../../../assets/cross.svg';
 import FoodInfo from "./FoodInfo";
+import {defineMealType} from "../../../utiles/functions";
 
 const AddingFood = ({mealName, active}) => {
-
     const [addingProduct, setAddingProduct] = useState(false);
     const [newProduct, setNewProduct] = useState({});
     const [loaded, setLoaded] = useState(  false);
 
-
+    const mealType = defineMealType(mealName);
     const findingProducts = useSelector((state) => state.products.findingProducts);
     const consumptionInfo = useSelector((state) => state.consumedProducts.consumptionInfo);
     const dispatch = useDispatch();
@@ -49,23 +49,26 @@ const AddingFood = ({mealName, active}) => {
             <p>{product.calories} ккал</p>
         </div>
     ))
-    const ConsumedProducts = consumptionInfo.consumedProducts.map((product) => (
-        <div className={styles.consumedProduct}>
-            <img src={crossIcon} alt={'cross'} onClick={()=>deleteProduct(product.id)}/>
-            <p className={styles.name}>{product.productName}</p>
-            <p>{product.kbju.calories} ккал</p>
-        </div>
-    ))
+    const ConsumedProducts = consumptionInfo.consumedProducts.map((product) => {
+        if (product.mealType === mealType)
+            return (
+                <div className={styles.consumedProduct}>
+                    <img src={crossIcon} alt={'cross'} onClick={() => deleteProduct(product.id)}/>
+                    <p className={styles.name}>{product.productName}</p>
+                    <p>{product.kbju.calories} ккал</p>
+                </div>
+            )
+    })
 
     return (
         <div>
             <p className={styles.title}>Добавить продукты на {mealName.toLowerCase()}</p>
             <div className={styles.addingProduct}>
                 {addingProduct
-                    ? <FoodInfo product={newProduct} setLoaded={setLoaded} setAddingProduct={setAddingProduct}/>
+                    ? <FoodInfo product={newProduct} setLoaded={setLoaded} setAddingProduct={setAddingProduct} mealType={mealType}/>
                     : <div className={styles.mealHistory}>
                         {ConsumedProducts}
-                        <p>Итого: {consumptionInfo.totalKbju.calories}</p>
+                        <p>Итого: {consumptionInfo.caloriesByMealType[mealType]} ккал</p>
                     </div>
                 }
 

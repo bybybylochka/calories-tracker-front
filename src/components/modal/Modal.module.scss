@@ -35,3 +35,13 @@
 .moDalContent.active{
   transform: scale(1);
 }
+
+.water{
+  background-color: $background-water-color;
+}
+.recipe{
+  background-color: $background-recipes-color;
+}
+.food{
+  background-color: $background-color;
+}
