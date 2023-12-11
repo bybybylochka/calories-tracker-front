@@ -8,6 +8,8 @@ import styles from './App.module.scss';
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {me} from "./reducers/auth-reducer";
+import Survey from "./components/survey/Survey";
+import Registration from "./components/registration/Registration";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -22,6 +24,8 @@ const App = () => {
                     <Route path='/' element={<MainPage/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/survey' element={<Survey/>}/>
+                    <Route path='/registration' element={<Registration/>}/>
                 </Routes>
                 <Footer/>
             </div>

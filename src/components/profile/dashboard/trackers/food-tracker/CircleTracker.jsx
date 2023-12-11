@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from "./Trackers.module.scss";
 
-const CircleTracker = ({norm, consumed}) => {
+const CircleTracker = ({norm, consumed, color}) => {
     const CIRCLE_LENGTH = 1256.63706;
     const percent=(consumed/norm)*CIRCLE_LENGTH;
     
     return (
         <div >
-                <svg height='440' width='440' className={styles.circularChart+' '+styles.color}>
+                <svg height='440' width='440' className={styles.circularChart+' '+styles[color]}>
                     <path className={styles.circleBg}
                           d="M220 20
           a 200 200 0 0 1 0 400

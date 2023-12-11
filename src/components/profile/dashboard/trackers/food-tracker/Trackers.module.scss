@@ -10,7 +10,7 @@
   margin: 10px auto;
   .text{
     color: black;
-    @include font($size: 1.6rem, $weight: 500);
+    @include font($size: 2rem, $weight: 500);
     text-anchor: middle;
   }
   .percentage {
@@ -40,8 +40,11 @@
   }
 }
 
-.circularChart.color .circle {
+.circularChart.food .circle {
   stroke: $main-color;
+}
+.circularChart.water .circle {
+  stroke: $water-color;
 }
 
 

@@ -13,7 +13,7 @@ const BriefMealInfo = ({mealName, consumed, norm}) => {
             <p>{mealName}</p>
             <p className={styles.tracker}>{consumed}/{norm}</p>
             <img src={addIcon} alt="add icon" onClick={()=>setModalActive(true)}/>
-            <Modal active={modalActive} setActive={setModalActive}>
+            <Modal active={modalActive} setActive={setModalActive} backgroundColor={'food'}>
                 <AddingFood mealName={mealName} active={modalActive} setActive={setModalActive}/>
             </Modal>
         </div>

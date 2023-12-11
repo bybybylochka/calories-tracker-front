@@ -13,10 +13,10 @@ button{
   @include font($size: 2rem,$weight: 600);
 }
 
-input{
+input, select{
   border-radius: 10px;
   border: 1px solid $border-color;
   background: $input-background-color;
   @include font(1.6rem);
-  padding: 27px 33px;
+  padding: 20px 26px;
 }

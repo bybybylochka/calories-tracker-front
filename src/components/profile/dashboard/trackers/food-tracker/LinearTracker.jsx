@@ -3,7 +3,11 @@ import styles from "./Trackers.module.scss";
 
 const LinearTracker = ({text, norm, consumed}) => {
     const LINE_LENGTH=160;
-    const percent = consumed/norm*100;
+    let percent = consumed/norm*160;
+    if(percent>LINE_LENGTH){
+        percent=LINE_LENGTH;
+    }
+    console.log(norm, consumed, percent)
 
     return (
             <svg height='140' width='200'>

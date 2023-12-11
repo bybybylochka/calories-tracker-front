@@ -9,6 +9,10 @@ export const authApi = {
     login(username, password) {
         return instance.post('/authorize', {username, password})
             .then(response => response.data);
+    },
+    registration(username, password){
+        return instance.post('/register/user', {username, password})
+            .then(response => response.data);
     }
 }
 export const productApi = {
@@ -65,6 +69,74 @@ export const personalDataApi = {
                 Authorization: `Bearer ${Cookies.get('jwt')}`
             }
         })
+            .then(response => response.data);
+    },
+    addPersonalData(personalData){
+        return instance.post('/personalData/add',
+            {...personalData},
+            {
+            headers: {
+                Authorization: `Bearer ${Cookies.get('jwt')}`
+            }
+        })
+            .then(response => response.data);
+    }
+}
+export const waterApi = {
+    getTodayConsumedWater() {
+        return instance.get('/consumed-water/today',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    },
+    addConsumedWater(volume) {
+        return instance.post('/consumed-water',
+        {},
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                },
+                params: {
+                    volume: volume
+                }})
+            .then(response => response.data)
+            .catch((error)=>console.log(error));
+    },
+    deleteConsumedWater(volume) {
+        return instance.delete('/consumed-water',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                },
+                params: {
+                    volume: volume
+                }})
+            .then(response => response.data)
+            .catch((error)=>console.log(error));
+    }
+}
+
+export const recipesApi = {
+    getFavouriteRecipes () {
+        return instance.get('/user/favourite-recipes',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    },
+    createShopList(recipes) {
+        return instance.post('/shopping-list/create',
+            {recipes},
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
             .then(response => response.data);
     }
 }

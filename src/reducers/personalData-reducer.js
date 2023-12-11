@@ -21,9 +21,16 @@ const personalDataReducer = (state = initialState, action) => {
 
 export const getPersonalData = () => async (dispatch) => {
     let response = await personalDataApi.getPersonalData();
-    console.log('response'+response)
     if(response){
         dispatch(setUserPersonalData(response));
+    }
+}
+
+export const addPersonalData = (personalData) => async (dispatch) => {
+    console.log(personalData);
+    let response = await personalDataApi.addPersonalData(personalData);
+    if(response){
+        console.log(response);
     }
 }
 

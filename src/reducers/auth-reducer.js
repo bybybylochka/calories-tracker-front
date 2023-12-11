@@ -25,6 +25,14 @@ export const login = (login, password) => async (dispatch) => {
         dispatch(setUserData(response.token));
     }
 }
+export const register = (login, password) => async (dispatch) => {
+    let response = await authApi.registration(login, password);
+    console.log(response);
+    if(response.token){
+        Cookies.set('jwt', response.token, {expires: 1})
+        dispatch(setUserData(response.token));
+    }
+}
 export const me = () => async (dispatch) => {
     if(Cookies.get('jwt')){
         dispatch(setUserData());

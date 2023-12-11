@@ -15,10 +15,43 @@
 p{
   @include font($size: 2.2rem, $weight:500);
 }
-
+.title{
+  @include font($size: 3rem, $weight:600);
+  text-align: center;
+}
 .addingButton{
   background-color: $additional-color;
   border-radius: 50%;
   padding: 10px;
   height: fit-content;
+}
+.addingWater{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button{
+  width: fit-content;
+  background-color: transparent;
+  padding: 20px;
+}
+.waterTrackerForm{
+  background-color: $additional-color;
+  border-radius: 32px;
+  padding: 10px 20px;
+  display: flex;
+  input{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-right: $water-color 3px solid;
+    border-left: $water-color 3px solid;
+    width: 160px;
+    text-align: center;
+    padding: 0;
+    @include font($size: 2.8rem, $weight:600);
+    &:focus{
+      outline: none;
+    }
+  }
 }

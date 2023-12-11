@@ -9,7 +9,7 @@ const Tracker = ({norm}) => {
     if(norm)
     return (
         <div className={styles.wrapper}>
-            <CircleTracker norm={norm.calories} consumed={consumptionInfo.calories}/>
+            <CircleTracker norm={norm.calories} consumed={consumptionInfo.calories} color={'food'}/>
             <div className={styles.linearTrackers}>
                 <LinearTracker text={"Белки"} norm={norm.proteins} consumed={consumptionInfo.proteins}/>
                 <LinearTracker text={"Жиры"} norm={norm.fats} consumed={consumptionInfo.fats}/>
