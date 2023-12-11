@@ -1,0 +1,22 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+
+.articleWrapper{
+  background-color: $background-color;
+  border-radius: 33px;
+  padding: 20px 40px;
+}
+.articleTitle{
+  background-color: $highlighting-color;
+  border-radius: 26px;
+  display: inline-block;
+  @include  font($size: 2.4rem, $weight:600);
+  padding: 10px 30px;
+  width: fit-content;
+}
+.creatingInfo{
+  p{
+    color: $conditions-color;
+    @include font(1.3rem);
+  }
+}

@@ -13,7 +13,7 @@ button{
   @include font($size: 2rem,$weight: 600);
 }
 
-input, select{
+input, select, textarea{
   border-radius: 10px;
   border: 1px solid $border-color;
   background: $input-background-color;

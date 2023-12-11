@@ -1,31 +1,39 @@
+import {articlesApi, recipesApi} from "../api/api";
+import {setFavouriteRecipes, setRecipes} from "./recipes-reducer";
+
+const SET_ARTICLES = 'SET_ARTICLES';
+
 let initialState = {
-    articles: [
-        { articleId: 1,
-          title: "Польза груш для ЖКТ",
-          text: "Груши – кладезь полезных веществ, незаменимых для организма"
-        },
-        { articleId: 2,
-            title: "Чем опасна газировка?",
-            text: "По статистике, сладкую газировку время от времени пьют более 75% жителей СНГ"
-        },
-        { articleId: 3,
-            title: "Что купить к чаю?",
-            text: "Что купить к чаю из выпечки: полезные советы и рекомендации от диетолога"
-        },
-        { articleId: 4,
-            title: "Готовим ПП-мороженое",
-            text: "ПП-мороженое готовить так же несложно, как и другие варианты этого десерта"
-        },
-        { articleId: 5,
-            title: "aaaaaaaaa",
-            text: ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
-        }
-    ]
+    articles: []
 }
 
 const articlesReducer = (state = initialState, action) => {
     switch (action.type){
+        case SET_ARTICLES:
+            return {
+                ...state,
+                ...action.payload
+            }
         default: return state;
+    }
+}
+export const getArticlesByEditor = () => async (dispatch) => {
+    let response = await articlesApi.getArticlesByEditor();
+    if(response){
+        dispatch(setArticles(response.articles));
+    }
+}
+
+export const addArticle = (title, content) => async (dispatch) => {
+    let response = await articlesApi.addArticle(title, content);
+    if(response){
+        console.log(response);
+    }
+}
+export const setArticles = (articles) => {
+    return {
+        type: SET_ARTICLES,
+        payload: {articles}
     }
 }
 

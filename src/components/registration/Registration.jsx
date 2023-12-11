@@ -8,6 +8,7 @@ import RegistrationForm from "./RegistrationForm";
 
 
 const Registration = () => {
+    let role = useSelector((state)=>state.auth.role);
     let isAuth = useSelector((state)=>state.auth.isAuth);
 
     let dispatch = useDispatch();
@@ -16,7 +17,8 @@ const Registration = () => {
     }
 
     if(isAuth){
-        return  <Navigate replace to={"/survey"} />
+        if(role==='ROLE_USER') return  <Navigate replace to={"/profile"} />
+        else if(role==='ROLE_EDITOR') return  <Navigate replace to={"/editorProfile"}/>
     }
 
     return (

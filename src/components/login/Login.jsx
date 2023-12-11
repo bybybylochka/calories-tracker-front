@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 const Login = () => {
     let isAuth = useSelector((state)=>state.auth.isAuth);
+    let role = useSelector((state)=>state.auth.role);
 
     let dispatch = useDispatch();
     const onSubmit = (formData) =>{
@@ -16,7 +17,8 @@ const Login = () => {
     }
 
     if(isAuth){
-        return  <Navigate replace to={"/profile"} />
+        if(role==='ROLE_USER') return  <Navigate replace to={"/profile"} />
+        else if(role==='ROLE_EDITOR') return  <Navigate replace to={"/editorProfile"}/>
     }
 
     return (

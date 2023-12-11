@@ -1,0 +1,48 @@
+@import '../../styles/style-variables';
+@import '../../styles/mixins';
+
+.wrapper{
+  display: flex;
+}
+.title{
+  @include font($size: 2rem, $weight: 500);
+  color: $main-color;
+}
+
+.editorNavigation{
+  background-color: $main-color;
+  padding: 37px 60px;
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap:26px;
+    padding: 0;
+    li{
+      padding: 0;
+    }
+  }
+}
+
+.link{
+  display:flex;
+  gap: 21px;
+  list-style: none;
+  padding: 0 59px;
+  cursor: pointer;
+  .inactiveLinkButton{
+    display: inline-block;
+    text-decoration: none;
+    color: $light-text-color;
+    @include font(2rem, 2.6rem, 500);
+  }
+  .activeLinkButton{
+    display: inline-block;
+    text-decoration: none;
+    color: $additional-highlighting-color;
+    @include font(2rem, 2.6rem, 500);
+  }
+}
+.main{
+  padding: 37px 60px;
+  flex-grow: 1;
+}

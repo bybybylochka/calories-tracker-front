@@ -138,5 +138,62 @@ export const recipesApi = {
                 }
             })
             .then(response => response.data);
+    },
+    getAllRecipes(){
+        return instance.get('/recipe',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    },
+    getAllRecipesByParams(title, maxCalories, shouldSort){
+        return instance.get('/recipe/allByParams',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                },
+                params: {
+                    title,
+                    maxCalories,
+                    shouldSort
+                }
+            })
+            .then(response => response.data);
+    },
+    getRecipesByEditor(){
+        return instance.get('/recipe/get/author',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    }
+}
+
+export const articlesApi = {
+    addArticle (title, content) {
+        return instance.post('/article/add',
+            {
+                title,
+                content
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
+    },
+    getArticlesByEditor(){
+        return instance.get('/article/get/author',
+            {
+                headers: {
+                    Authorization: `Bearer ${Cookies.get('jwt')}`
+                }
+            })
+            .then(response => response.data);
     }
 }

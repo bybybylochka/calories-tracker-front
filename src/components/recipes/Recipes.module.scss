@@ -1,0 +1,165 @@
+@import '../../styles/mixins';
+@import '../../styles/style-variables';
+@import '../../styles/placeholders';
+
+
+.coloring{
+  background-color: $main-color;
+  .wrapper {
+    border-radius: 33px;
+    @extend %alignment;
+    background-position: right 50px center;
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+    padding: 30px 50px 20px;
+
+  }
+  padding-bottom: 29px;
+}
+.title{
+  @include font($size:3rem, $weight: 600);
+  color: $additional-color;
+}
+.errorText{
+  color:$error-color;
+  @include font($size: 1.6rem, $weight: 500);
+}
+.errorField{
+  border-color: $error-color;
+}
+.searchBar{
+  display: flex;
+  background-color: $additional-color;
+  margin-top: 100px;
+  border-radius: 27px;
+  padding: 9px;
+  input{
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    @include font(2.2rem);
+    &:focus{
+      outline: none;
+    }
+  }
+  img{
+    width: 30px;
+  }
+}
+.searchButton{
+  background-color: transparent;
+  padding: 11px 30px;
+  border-left: $main-color 4px solid;
+  border-radius: 0;
+  color: $main-color;
+  @include font($size: 2.2rem, $weight:500);
+}
+.searchingForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: end;
+  p{
+    display: inline-block;
+    padding-left: 10px;
+  }
+}
+.recipe{
+  display: flex;
+  justify-content: space-between;
+}
+.instruction{
+  padding-left: 20px;
+  flex-basis: 60%;
+}
+.subtitle{
+  @include font($size: 1.8rem, $weight:600);
+}
+
+.ingredients{
+  flex-basis: 40%;
+  padding-right: 20px;
+  border-right: $main-color 3px solid;
+}
+.ingredient{
+  p{
+    @include font(1.8rem);
+    margin: 0;
+  }
+  display: flex;
+  justify-content: space-between;
+
+}
+.recipeWrapper{
+  background-color: $additional-color;
+  border-radius: 32px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.recipeTitle{
+  background-color: $highlighting-color;
+  border-radius: 26px;
+  display: inline-block;
+  @include  font($size: 2.4rem, $weight:600);
+  padding: 10px 30px;
+  width: fit-content;
+}
+.description{
+  @include font(1.8rem);
+}
+.additionalInfo{
+  margin-left: 20px;
+  display: inline-flex;
+  gap: 40px;
+  p{
+    margin: 0;
+  }
+  img{
+    width: 20px;
+  }
+}
+.creatingInfo{
+  p{
+    color: $conditions-color;
+    @include font(1.3rem);
+  }
+}
+.kbju{
+  display: flex;
+  justify-content: space-between;
+  p{
+    @include font(1.6rem);
+  }
+}
+.paramsForm{
+  padding: 20px;
+  p{
+    text-align: center;
+    margin: 0;
+    @include font(1.6rem);
+  }
+}
+.filterForm{
+  background-color: $main-color;
+  padding: 10px 0;
+  margin: 0;
+  width: 100%;
+}
+.sortForm{
+  margin-top: 30px;
+  transform: scale(2);
+  color: $main-color;
+}
+.clearButton{
+  background-color: $main-color;
+  border: none;
+  border-radius: 12px;
+  color: $light-text-color;
+  padding: 17px 63px;
+  @include font($size: 2rem,$weight: 600);
+  width: fit-content;
+  margin: auto;
+}

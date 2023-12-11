@@ -2,11 +2,21 @@ import {useFormik} from "formik";
 import React from "react";
 import styles from './AddingFood.module.scss'
 
+const validate = values => {
+    const errors = {};
+
+    if (!values.name) {
+        errors.name = 'Введите название продукта';
+    }
+    return errors;
+};
+
 const SearchingFoodForm = ({onSubmit}) => {
     const formik = useFormik({
         initialValues: {
             name: ''
         },
+        validate,
         onSubmit: values => {
             onSubmit(values);
         },
