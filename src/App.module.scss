@@ -20,3 +20,32 @@ input, select, textarea{
   @include font(1.6rem);
   padding: 20px 26px;
 }
+
+table{
+  border-radius: 33px;
+  border: $main-color 3px solid;
+  padding: 10px;
+  *{
+    @include font(1.8rem);
+  }
+  thead{
+    background-color: $background-color;
+  }
+  th{
+    padding: 20px 40px;
+    background-color: $background-color;
+    border-radius: 33px;
+  }
+  td{
+    padding: 20px 40px;
+    text-align: center;
+
+  }
+}
+.errorText{
+  color:$error-color;
+  @include font($size: 1.6rem, $weight: 500);
+}
+.errorField{
+  border-color: $error-color;
+}

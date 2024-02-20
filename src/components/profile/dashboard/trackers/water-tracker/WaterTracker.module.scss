@@ -40,6 +40,8 @@ p{
   border-radius: 32px;
   padding: 10px 20px;
   display: flex;
+  width: fit-content;
+  margin: auto;
   input{
     background-color: transparent;
     border: none;
@@ -48,7 +50,7 @@ p{
     border-left: $water-color 3px solid;
     width: 160px;
     text-align: center;
-    padding: 0;
+    padding: 0 40px;
     @include font($size: 2.8rem, $weight:600);
     &:focus{
       outline: none;

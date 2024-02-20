@@ -1,8 +1,9 @@
-import {recipesApi, waterApi} from "../api/api";
+import {articlesApi, recipesApi, usersApi, waterApi} from "../api/api";
 
 const SET_FAVOURITE_RECIPES = 'SET_FAVOURITE_RECIPES';
 const SET_SHOP_LIST = 'SET_SHOP_LIST';
 const SET_RECIPES = 'SET_RECIPES';
+const ADD_RECIPE_TO_FAVOURITE = 'ADD_RECIPE_TO_FAVOURITE';
 
 const initialState = {
     favouriteRecipes: [],
@@ -27,6 +28,16 @@ const recipesReducer = (state=initialState, action) => {
                 ...state,
                 ...action.payload
             }
+        // case ADD_RECIPE_TO_FAVOURITE:
+        //     return {
+        //         ...state,
+        //         recipes: [...state.recipes.map((recipe)=>{
+        //             if(recipe.id===action.payload.recipeId){
+        //                 recipe.likesCount=recipe.likesCount+1;
+        //             }
+        //             return recipe;
+        //         })]
+        //     }
         default: return state;
     }
 }
@@ -49,6 +60,12 @@ export const getRecipesByEditor = () => async (dispatch) => {
         dispatch(setRecipes(response.recipes));
     }
 }
+export const addRecipe = (request) => async (dispatch) => {
+    let response = await recipesApi.addRecipe(request);
+    if(response){
+        console.log(response);
+    }
+}
 export const getAllRecipesByParams = (title, maxCalories, shouldSort) => async (dispatch) => {
     console.log(title, maxCalories, shouldSort);
     let response = await recipesApi.getAllRecipesByParams(title, maxCalories, shouldSort);
@@ -61,6 +78,14 @@ export const createShopList = (recipes) => async (dispatch) => {
     let response = await recipesApi.createShopList(recipes);
     if(response){
         dispatch(setShopList(response.response));
+    }
+}
+export const addFavouriteRecipe = (recipeId) => async (dispatch)=>{
+    let response = await usersApi.addFavouriteRecipe(recipeId);
+    if(response){
+        console.log(response);
+        dispatch(getAllRecipes());
+        //dispatch(addRecipeToFavourite(recipeId))
     }
 }
 

@@ -1,0 +1,17 @@
+@import '../../../styles/style-variables';
+@import '../../../styles/mixins';
+
+.addingEditor{
+  background: url(../../../assets/promoImage.svg) no-repeat;
+  background-position: right center;
+  background-size: 500px;
+}
+.successMessage{
+  text-align: center;
+  @include font($size: 5rem, $weight: 600);
+}
+.successImage{
+  display: block;
+  width: 200px;
+  margin: 150px auto;
+}

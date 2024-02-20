@@ -1,0 +1,27 @@
+.articleWrapper {
+  background-color: #E6F2EA;
+  border-radius: 33px;
+  padding: 20px 40px;
+}
+
+.articleTitle {
+  background-color: #FF9A9B;
+  border-radius: 26px;
+  display: inline-block;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px 30px;
+  width: fit-content;
+}
+
+.creatingInfo p {
+  color: #6C6C6C;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=Articles.module.css.map */

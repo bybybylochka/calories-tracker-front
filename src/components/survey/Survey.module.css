@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.coloring .wrapper {
+  max-width: 1315px;
+  margin: auto;
+}
+
+.coloring {
+  background-color: #198B43;
+  padding-bottom: 29px;
+}
+.coloring .wrapper {
+  border-radius: 33px;
+  background: url("../../assets/authImage.svg") no-repeat;
+  background-position: right 50px center;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px 20px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+.formContainer .title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+label {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+
+input, select {
+  margin-left: 30px;
+}
+
+.genderContainer {
+  display: flex;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
+.errorText {
+  color: #c44141;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.errorField {
+  border-color: #c44141;
+}
+
+/*# sourceMappingURL=Survey.module.css.map */

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.wrapper {
+  padding: 31px;
+  background-color: #BCE3FF;
+  border-radius: 26px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+p {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.title {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.addingButton {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  height: fit-content;
+}
+
+.addingWater {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button {
+  width: fit-content;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.waterTrackerForm {
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 10px 20px;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+.waterTrackerForm input {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-right: #65A4FF 3px solid;
+  border-left: #65A4FF 3px solid;
+  width: 160px;
+  text-align: center;
+  padding: 0 40px;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.waterTrackerForm input:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=WaterTracker.module.css.map */

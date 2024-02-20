@@ -48,6 +48,9 @@
   img{
     width: 30px;
   }
+  form{
+    width: 100%;
+  }
 }
 .searchButton{
   background-color: transparent;
@@ -162,4 +165,10 @@
   @include font($size: 2rem,$weight: 600);
   width: fit-content;
   margin: auto;
+}
+.articles{
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+  flex-grow: 1;
 }

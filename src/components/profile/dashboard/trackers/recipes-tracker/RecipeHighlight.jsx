@@ -1,5 +1,5 @@
 import React from 'react';
-import recipeImage from "../../../../../assets/recipe.svg";
+import recipeImage from "../../../../../assets/meal.png";
 import styles from "./RecipesTracker.module.scss"
 
 const RecipeHighlight = ({recipe, setRecipeView, setActiveRecipe, setChosenRecipes, setIsChoose}) => {

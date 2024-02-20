@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.coloring .wrapper {
+  max-width: 1315px;
+  margin: auto;
+}
+
+.coloring {
+  background-color: #181818;
+}
+.coloring .wrapper {
+  padding: 70px 150px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+}
+.coloring * {
+  color: #ffffff;
+}
+.coloring ul {
+  padding: 0;
+}
+.coloring li {
+  list-style: none;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 14px;
+}
+.coloring p {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 40px;
+}
+.coloring h4 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 0;
+}
+
+.logo {
+  align-items: center;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

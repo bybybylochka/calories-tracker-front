@@ -13,13 +13,13 @@ const Promo = () => {
                     <p className={styles.text}>С помощью нашего сервиса вы можете вести дневник питания,
                         отслеживать активность и успешно снижать вес. Теперь считать
                         калории и терять килограммы очень легко!</p>
-                    <button>Оформить подписку</button>
+                    <button>Присоединиться</button>
                 </div>
                 <div>
-                    <div className={styles.sale}>
-                        <img src={saleIcon} alt={'sale'}/>
-                        <p>Скидка на 6 месяцев подписки</p>
-                    </div>
+                    {/*<div className={styles.sale}>*/}
+                    {/*    <img src={saleIcon} alt={'sale'}/>*/}
+                    {/*    <p>Скидка на 6 месяцев подписки</p>*/}
+                    {/*</div>*/}
                     <img src={promoImage} alt={'promo'}/>
                 </div>
             </div>

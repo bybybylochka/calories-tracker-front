@@ -1,0 +1,21 @@
+.addingEditor {
+  background: url(../../../assets/promoImage.svg) no-repeat;
+  background-position: right center;
+  background-size: 500px;
+}
+
+.successMessage {
+  text-align: center;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.successImage {
+  display: block;
+  width: 200px;
+  margin: 150px auto;
+}
+
+/*# sourceMappingURL=AdminEditors.module.css.map */

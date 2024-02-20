@@ -2,6 +2,7 @@ import {authApi} from "../api/api";
 import Cookies from "js-cookie";
 
 const SET_USER_DATA = "SET_USER_DATA";
+const REMOVE_USER_DATA = "REMOVE_USER_DATA";
 
 let initialState = {
     role: '',
@@ -16,21 +17,32 @@ const authReducer = (state = initialState, action) => {
                 ...action.payload,
                 isAuth: true
             }
+        case REMOVE_USER_DATA:
+            return {
+                ...state,
+                isAuth: false,
+                role: ''
+            }
         default: return state;
     }
 }
 export const login = (login, password) => async (dispatch) => {
     let response = await authApi.login(login, password);
-    console.log(response);
-    if(response.token){
+    if(response){
         Cookies.set('jwt', response.token, {expires: 1});
         Cookies.set('role', response.role, {expires: 1})
         dispatch(setUserData(response.role));
     }
 }
+export const logout = () => async (dispatch) => {
+    await authApi.logout();
+    Cookies.remove('jwt');
+    Cookies.remove('role')
+    dispatch(removeUserData());
+}
 export const register = (login, password) => async (dispatch) => {
     let response = await authApi.registration(login, password);
-    if(response.token){
+    if(response){
         Cookies.set('jwt', response.token, {expires: 1})
         Cookies.set('role', response.role, {expires: 1})
         dispatch(setUserData(response.token));
@@ -46,6 +58,11 @@ export const setUserData = (role) => {
     return {
         type: SET_USER_DATA,
         payload: {role}
+    }
+}
+export const removeUserData = () => {
+    return {
+        type: REMOVE_USER_DATA
     }
 }
 

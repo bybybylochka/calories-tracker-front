@@ -1,0 +1,89 @@
+.wrapper {
+  padding-right: 80px;
+}
+
+.circularChart {
+  display: block;
+  margin: 10px auto;
+}
+.circularChart .text {
+  color: black;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-anchor: middle;
+}
+.circularChart .percentage {
+  color: black;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-anchor: middle;
+}
+
+.circleBg {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 41;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 39;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circularChart.food .circle {
+  stroke: #198B43;
+}
+
+.circularChart.water .circle {
+  stroke: #65A4FF;
+}
+
+.linearTrackers {
+  margin-top: 60px;
+  display: flex;
+  gap: 60px;
+}
+.linearTrackers .text {
+  color: black;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-anchor: middle;
+}
+.linearTrackers .percentage {
+  color: black;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-anchor: middle;
+}
+
+.lineBg {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 41;
+  stroke-linecap: round;
+}
+
+.line {
+  fill: none;
+  stroke: #198B43;
+  stroke-width: 39;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+/*# sourceMappingURL=Trackers.module.css.map */

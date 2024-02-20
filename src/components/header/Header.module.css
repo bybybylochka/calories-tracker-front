@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.coloring .wrapper {
+  max-width: 1315px;
+  margin: auto;
+}
+
+.coloring {
+  background-color: #198B43;
+}
+.coloring .wrapper {
+  padding: 25px 57px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

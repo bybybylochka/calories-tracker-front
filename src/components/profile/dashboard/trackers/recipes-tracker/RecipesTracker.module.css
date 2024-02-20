@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.wrapper {
+  padding: 31px;
+  background-color: #FFD2D3;
+  border-radius: 26px;
+  margin-top: 30px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.images {
+  display: flex;
+  gap: 21px;
+}
+
+p {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.title {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.addingButton {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  height: fit-content;
+}
+
+.recipeHighlight {
+  background-color: #ffffff;
+  border-radius: 27px;
+  display: flex;
+  justify-content: space-between;
+  gap: 33px;
+}
+.recipeHighlight p {
+  flex-grow: 1;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.recipeHighlight input {
+  margin: 25px;
+  width: 16px;
+}
+
+.recipesModal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favouriteRecipes {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  gap: 11px;
+  padding-right: 57px;
+  border-right: #ffffff 5px solid;
+}
+
+.shopListBlock {
+  flex-basis: 50%;
+  padding-left: 57px;
+  display: flex;
+  flex-direction: column;
+}
+.shopListBlock button {
+  background-color: #ffffff;
+  color: #AF336A;
+  border-radius: 27px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.fullRecipe {
+  display: flex;
+  justify-content: space-between;
+}
+.fullRecipe .title {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.fullRecipe button {
+  background-color: #ffffff;
+  color: #AF336A;
+  border-radius: 27px;
+}
+
+.subtitle {
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.ingredients {
+  flex-basis: 50%;
+  padding-right: 57px;
+  border-right: #ffffff 5px solid;
+}
+
+.ingredient {
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  justify-content: space-between;
+}
+
+.instruction {
+  padding-left: 57px;
+  flex-basis: 50%;
+  margin-top: 60px;
+}
+
+.shopList {
+  overflow: auto;
+}
+
+.shopListItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=RecipesTracker.module.css.map */

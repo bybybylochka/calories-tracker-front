@@ -3,9 +3,18 @@ import BriefMealInfo from "./BriefMealInfo";
 import girlAvatar from "../../../../assets/girlAvatar.svg";
 import editIcon from "../../../../assets/editIcon.svg";
 import styles from './ControlPanel.module.scss';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import leftImage from "../../../../assets/left.svg";
+import {logout} from "../../../../reducers/auth-reducer";
+import {Navigate, NavLink} from "react-router-dom";
 const ControlPanel = ({name, norm}) =>{
     const consumptionInfo = useSelector((state) => state.consumedProducts.consumptionInfo.caloriesByMealType);
+    const isAuth = useSelector((state)=>state.auth.isAuth);
+    const dispatch = useDispatch();
+    const onClick = () => {
+        dispatch(logout());
+    }
+    if(!isAuth) return <Navigate to={"/"}/>
     return (
         <div>
             <div className={styles.profileInfo}>
@@ -14,7 +23,7 @@ const ControlPanel = ({name, norm}) =>{
                     <p className={styles.welcomeText}>Привет, {name}!</p>
                 </div>
                 <div>
-                    <img src={editIcon}/>
+                    <NavLink to={'editPersonalData'}><img src={editIcon}/></NavLink>
                 </div>
             </div>
             <div>
@@ -39,6 +48,7 @@ const ControlPanel = ({name, norm}) =>{
                                    :0}
                                norm={norm.snackNorm}/>
             </div>
+            <button className={styles.logoutButton} onClick={onClick}><img src={leftImage} alt={'left'}/>Выйти</button>
         </div>
     )
 }

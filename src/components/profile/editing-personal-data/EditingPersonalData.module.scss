@@ -1,0 +1,45 @@
+@import '../../../styles/style-variables';
+@import '../../../styles/mixins';
+@import '../../../styles/placeholders';
+
+.coloring{
+  background-color: $main-color;
+  .wrapper {
+    border-radius: 33px;
+    @extend %alignment;
+    background: url('../../../assets/authImage.svg') no-repeat;
+    background-position: right 50px center;
+    background-color: $additional-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px 20px;
+
+  }
+  padding-bottom: 29px;
+}
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  .title{
+    @include font($size: 3.2rem, $weight: 600);
+  }
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+label{
+  @include font(2.2rem);
+  display: inline-block;
+}
+input, select{
+  margin-left: 30px;
+}
+.genderContainer{
+  display: flex;
+}
+input[type=number]{
+  width: 50px;
+}

@@ -17,7 +17,8 @@ const AddingFoodForm = ({onSubmit, onChange}) => {
                 <input id="weight"
                        name="weight"
                        placeholder="Вес"
-                       type="text"
+                       type="number"
+                       min={1}
                        onChange={(event) => {
                            formik.handleChange(event);
                            onChange(event);

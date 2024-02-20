@@ -17,6 +17,12 @@ const articlesReducer = (state = initialState, action) => {
         default: return state;
     }
 }
+export const getAllArticles = () => async (dispatch) => {
+    let response = await articlesApi.gerArticles();
+    if(response){
+        dispatch(setArticles(response.articles));
+    }
+}
 export const getArticlesByEditor = () => async (dispatch) => {
     let response = await articlesApi.getArticlesByEditor();
     if(response){

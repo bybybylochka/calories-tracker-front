@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.coloring .wrapper {
+  max-width: 1315px;
+  margin: auto;
+}
+
+.coloring {
+  background-color: #ffffff;
+}
+.title {
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.argumentsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 38px;
+}
+
+/*# sourceMappingURL=Needs.module.css.map */

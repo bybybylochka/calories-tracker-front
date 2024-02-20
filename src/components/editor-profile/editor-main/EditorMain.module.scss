@@ -41,3 +41,41 @@ form{
   width: 200px;
   margin: 150px auto;
 }
+.quantity{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.ingredient{
+  display: flex;
+  flex-direction: row;
+  ul{
+    list-style: none;
+    background-color: $background-color;
+    li{
+      @include font(1.8rem);
+      padding: 10px;
+    }
+  }
+  input{
+    height: fit-content;
+  }
+}
+.ingredients{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.ingredientSearch{
+  display: flex;
+  flex-direction: column;
+}
+.addingProduct{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  input{
+    height: fit-content;
+  }
+}

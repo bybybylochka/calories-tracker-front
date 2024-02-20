@@ -25,6 +25,19 @@ export const findProductByName = (name) => async (dispatch) => {
     }
 }
 
+
+export const getAllByName = async (name) => {
+    const response = await productApi.findProductByName(name)
+    return response;
+}
+
+export const addProduct = (product) => async (dispatch) =>{
+    let response=await productApi.addProduct(product);
+    if(response){
+        console.log(response);
+    }
+}
+
 export const setFindingProducts = (products) => {
     return {
         type:SET_FINDING_PRODUCTS,

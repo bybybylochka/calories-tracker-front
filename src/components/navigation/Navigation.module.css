@@ -1,0 +1,26 @@
+.link {
+  display: inline;
+  list-style: none;
+  padding: 0 59px;
+  cursor: pointer;
+}
+.link .inactiveLinkButton {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+.link .activeLinkButton {
+  display: inline-block;
+  text-decoration: none;
+  color: #FEFB53;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+
+/*# sourceMappingURL=Navigation.module.css.map */

@@ -33,9 +33,11 @@ const Recipes = () => {
             <div className={styles.wrapper}>
                 <div className={styles.recipes}>
                     <h3 className={styles.title}>Полезные и вкусные рецепты</h3>
-                    {Recipes}
+                    {recipes.length===0
+                    ?<p>Рецепты не найдены</p>
+                    :Recipes}
                 </div>
-                <div className={styles.searchBar}>\
+                <div className={styles.searchBar}>
                     <RecipesSearchingForm onSubmit={onSubmit} setAllRecipes={setAllRecipes}/>
                 </div>
             </div>

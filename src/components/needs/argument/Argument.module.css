@@ -1,0 +1,29 @@
+.argument {
+  background-color: #E6F2EA;
+  border-radius: 26px;
+  padding: 26px;
+}
+
+.title {
+  background-color: #FEFB53;
+  padding: 10px 25px;
+  border-radius: 26px;
+  width: fit-content;
+  margin-bottom: 28px;
+}
+.title h4 {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=Argument.module.css.map */

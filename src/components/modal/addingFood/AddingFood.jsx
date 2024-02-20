@@ -68,7 +68,9 @@ const AddingFood = ({mealName, active}) => {
                     ? <FoodInfo product={newProduct} setLoaded={setLoaded} setAddingProduct={setAddingProduct} mealType={mealType}/>
                     : <div className={styles.mealHistory}>
                         {ConsumedProducts}
-                        <p>Итого: {consumptionInfo.caloriesByMealType[mealType]} ккал</p>
+                        {consumptionInfo.caloriesByMealType[mealType]
+                        ?<p>Итого: {consumptionInfo.caloriesByMealType[mealType]} ккал</p>
+                        :<p>Еще ничего не было внесено</p>}
                     </div>
                 }
 

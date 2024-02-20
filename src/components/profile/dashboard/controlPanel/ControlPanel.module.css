@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.profileInfo {
+  display: flex;
+  align-items: start;
+  margin: auto;
+  justify-content: center;
+}
+
+.welcomeText {
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.briefMealInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  border-bottom: #ffffff 4px solid;
+}
+.briefMealInfo .tracker {
+  flex-grow: 1;
+  text-align: end;
+}
+.briefMealInfo img {
+  flex-basis: auto;
+}
+
+.logoutButton {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+}
+
+/*# sourceMappingURL=ControlPanel.module.css.map */

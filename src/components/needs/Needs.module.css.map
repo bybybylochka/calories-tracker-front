@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../styles/fonts.scss","../../styles/placeholders.scss","../../styles/style-variables.scss","Needs.module.scss","../../styles/mixins.scss"],"names":[],"mappings":"AAAA;EACE;EACA;;ACKF;EACE,WCSc;EDRd;;;AELF;EACE,kBDJiB;;ACSnB;ECRE,WDSqB;ECRrB,YAHwD;EAIxD,aDOqC;ECNrC,aAL0B;;;ADa5B;EACE;EACA;EACA","file":"Needs.module.css"}

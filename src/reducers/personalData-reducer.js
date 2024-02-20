@@ -5,6 +5,11 @@ const SET_USER_PERSONAL_DATA = 'SET_USER_PERSONAL_DATA';
 
 const initialState = {
     name: '',
+    gender: '',
+    activityType:'',
+    goalType: '',
+    height: '',
+    dateOfBirth: {},
     norm: {}
 }
 
@@ -33,6 +38,16 @@ export const addPersonalData = (personalData) => async (dispatch) => {
         console.log(response);
     }
 }
+
+export const updatePersonalData = (personalData) => async (dispatch) => {
+    console.log(personalData);
+    let response = await personalDataApi.updatePersonalData(personalData);
+    if(response){
+        console.log(response);
+    }
+}
+
+
 
 export const setUserPersonalData = (response) => ({
     type: SET_USER_PERSONAL_DATA,

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.coloring .wrapper {
+  max-width: 1315px;
+  margin: auto;
+}
+
+.coloring {
+  background-color: #198B43;
+  padding-bottom: 29px;
+}
+.coloring .wrapper {
+  border-radius: 33px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px 20px;
+}
+
+.title {
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.sale {
+  background-color: #FF9A9B;
+  border-radius: 26px;
+  padding: 4px 21px;
+  display: flex;
+  gap: 13px;
+  width: fit-content;
+  float: right;
+  margin-bottom: 16px;
+}
+.sale p {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.description p {
+  margin-bottom: 60px;
+}
+.description h1 {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=Promo.module.css.map */

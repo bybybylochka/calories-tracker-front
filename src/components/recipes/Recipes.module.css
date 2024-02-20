@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.coloring .wrapper {
+  max-width: 1315px;
+  margin: auto;
+}
+
+.coloring {
+  background-color: #198B43;
+  padding-bottom: 29px;
+}
+.coloring .wrapper {
+  border-radius: 33px;
+  background-position: right 50px center;
+  background-color: #198B43;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+  padding: 30px 50px 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #ffffff;
+}
+
+.errorText {
+  color: #c44141;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.errorField {
+  border-color: #c44141;
+}
+
+.searchBar {
+  display: flex;
+  background-color: #ffffff;
+  margin-top: 100px;
+  border-radius: 27px;
+  padding: 9px;
+}
+.searchBar input {
+  border: none;
+  background-color: transparent;
+  flex-grow: 1;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.searchBar input:focus {
+  outline: none;
+}
+.searchBar img {
+  width: 30px;
+}
+.searchBar form {
+  width: 100%;
+}
+
+.searchButton {
+  background-color: transparent;
+  padding: 11px 30px;
+  border-left: #198B43 4px solid;
+  border-radius: 0;
+  color: #198B43;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.searchingForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: end;
+}
+.searchingForm p {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
+}
+
+.instruction {
+  padding-left: 20px;
+  flex-basis: 60%;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.ingredients {
+  flex-basis: 40%;
+  padding-right: 20px;
+  border-right: #198B43 3px solid;
+}
+
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+}
+.ingredient p {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.recipeWrapper {
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.recipeTitle {
+  background-color: #FF9A9B;
+  border-radius: 26px;
+  display: inline-block;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px 30px;
+  width: fit-content;
+}
+
+.description {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.additionalInfo {
+  margin-left: 20px;
+  display: inline-flex;
+  gap: 40px;
+}
+.additionalInfo p {
+  margin: 0;
+}
+.additionalInfo img {
+  width: 20px;
+}
+
+.creatingInfo p {
+  color: #6C6C6C;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.kbju {
+  display: flex;
+  justify-content: space-between;
+}
+.kbju p {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.paramsForm {
+  padding: 20px;
+}
+.paramsForm p {
+  text-align: center;
+  margin: 0;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filterForm {
+  background-color: #198B43;
+  padding: 10px 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sortForm {
+  margin-top: 30px;
+  transform: scale(2);
+  color: #198B43;
+}
+
+.clearButton {
+  background-color: #198B43;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 17px 63px;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: fit-content;
+  margin: auto;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=Recipes.module.css.map */

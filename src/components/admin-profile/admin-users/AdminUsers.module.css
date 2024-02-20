@@ -1,0 +1,24 @@
+.title {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.usersCount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.usersCountBlock {
+  display: flex;
+  gap: 20px;
+  margin: auto;
+  justify-content: center;
+}
+
+.usersTable {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=AdminUsers.module.css.map */

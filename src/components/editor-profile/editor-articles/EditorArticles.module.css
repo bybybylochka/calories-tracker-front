@@ -1,0 +1,7 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/*# sourceMappingURL=EditorArticles.module.css.map */

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "PlexSans";
+  src: url(../assets/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+.wrapper {
+  display: grid;
+  background-color: #E6F2EA;
+  border-radius: 33px;
+  padding: 60px 80px;
+  grid-template-columns: 10fr 1fr 4fr;
+  margin-top: 40px;
+}
+
+/*# sourceMappingURL=Dashboard.module.css.map */

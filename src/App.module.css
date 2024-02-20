@@ -1,0 +1,64 @@
+html {
+  font-size: 10px;
+}
+
+button {
+  background-color: #198B43;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 17px 63px;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+input, select, textarea {
+  border-radius: 10px;
+  border: 1px solid #777777;
+  background: #F7F7F5;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px 26px;
+}
+
+table {
+  border-radius: 33px;
+  border: #198B43 3px solid;
+  padding: 10px;
+}
+table * {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+table thead {
+  background-color: #E6F2EA;
+}
+table th {
+  padding: 20px 40px;
+  background-color: #E6F2EA;
+  border-radius: 33px;
+}
+table td {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.errorText {
+  color: #c44141;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.errorField {
+  border-color: #c44141;
+}
+
+/*# sourceMappingURL=App.module.css.map */

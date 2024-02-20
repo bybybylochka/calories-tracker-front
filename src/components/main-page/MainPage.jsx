@@ -12,7 +12,6 @@ const MainPage = () => {
             <Advantages/>
             <Needs/>
             <Functionality/>
-            <UsefulArticles/>
         </div>
     )
 }
